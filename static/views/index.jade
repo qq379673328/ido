@@ -7,5 +7,16 @@ html
 	body
 		div#header 我是header
 		block content
-			div 我是主页的内容
+			a(href='toAddPerson') 添加一个人
+			div
+				table
+					tr
+						td 姓名
+						td 性别
+						td 年龄
+					-for(var item in allPerson)
+						tr
+							td=item.namecn
+							td=item.sex
+							td=item.age
 		div#fotter 我是fotter
